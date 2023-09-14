@@ -25,4 +25,6 @@ let inc =arr.includes("day");
 console.log("includes",inc);
 let result = Array.isArray(arr);
 console.log("isarray",result)
+let at=arr.at(0);
+console.log("at()",at)
 
