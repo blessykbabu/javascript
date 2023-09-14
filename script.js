@@ -127,6 +127,11 @@ let st1="uncopyrightablea,ddjhkkkkkkkk,kkjjjjjjjjjj";
  console.log("endswith",n1.endsWith('me'));
  console.log("startswith",n1.startsWith('we'));
  console.log("startswith",n1.startsWith('ab'));
+
+ let word="uncopyrightable.messages.in.the.documents";
+ let jo=(word.split('.'));
+ console.log("split message",jo);
+ console.log("joined",jo.join('.'));
  
 
  
