@@ -116,7 +116,7 @@ console.log("split", st.split());
 let st1 = "uncopyrightablea,ddjhkkkkkkkk,kkjjjjjjjjjj";
 console.log("split", st1.split(","));
 
-let st2 = "uncopyrighta*bleaddjhkkkkkkkkkkj,jjjjjjjjj";
+let st2 = "uncopyrighta*bleaddjhkkkkkkkkkkj,jjjjjjjjj";                        //string properties
 let s3 = st2.split("*");
 console.log("splitedd", s3);
 
@@ -178,7 +178,7 @@ let js1 = JSON.parse(js);
 console.log("json parse type", typeof js1); // type:object
 console.log("json parse", JSON.parse(result));
 
-//conditional operators
+                               //conditional operators
 
 //let num1=prompt("enter a number");// prompt used to get from user
 //let num2=prompt("enter next number")
@@ -203,7 +203,7 @@ if (num1 > num2) {
   console.log("else condition");
 }
 
-// switxh
+// swith
 
 // let var1 = prompt("enter number");
 // switch (
@@ -211,7 +211,7 @@ if (num1 > num2) {
 // ) {
 //   case 1:
 //     console.log("number is 1");
-//     break;
+//     break;                                               //switch statements
 //   case 2:
 //     console.log("number is 2");
 //     break;
@@ -219,16 +219,77 @@ if (num1 > num2) {
 //     console.log("default");
 // }
 
-let var2 = prompt("enter the day");
-switch (var2) {
-  case "monday":
-    console.log("Monday");
-    break;
- case "tuesday":
-    console.log("Tuesday");
-    break;
-  default:
-    console.log("THERE IS NO VALUE")  
+// let var2 = prompt("enter the day");
+// switch (var2) {
+//   case "monday":
+//     console.log("Monday");
+//     break;                                             //switch statements
+//  case "tuesday":
+//     console.log("Tuesday");
+//     break;
+//   default:
+//     console.log("THERE IS NO VALUE")  
+// }
+              //loop       
+
+for(let i=0;i<=4;i++){
+  console.log("for loop",i)                    //for loop
+}
+let variable=1;
+while(variable<=10){
+  console.log("while loop",variable)                       //while loop
+  variable++
 }
 
+let data=2;
+do{
+  console.log("do while",data)
+  data++                                       // do while loop.
+}while(data<=7)
 
+let i1=0
+let arrays1=["apple","orange",2,null]
+for( i1 in arrays1 ){
+  console.log(arrays1[i1])                                   //for in loop
+}
+
+arrays1.forEach(function(value,index) //call back function
+{
+  console.log("VALUE",value);                              //forEach loop
+  console.log("INDEX",index);
+})
+
+                 // Break and continue
+
+  for(i3=0;i3<=7;i3++)
+  {
+    if(i3==5){
+      break;
+    }
+    console.log("break",i3)
+  }
+
+  for(i4=0;i4<=7;i4++)
+  {
+    if(i4==5){
+      continue;
+    }
+    console.log("continue",i4)
+  }
+
+                           //functions
+   //act();  we can call the fuction before the fuction definition in javascript
+  function act(){
+    console.log("this is a function")
+  }    
+  act()       // function call      
+  
+  let v2=function (){     //anonymous function.no need to give function name.function store in a variable here
+    console.log("this is a  anotherfunction")
+  }    
+  v2()
+
+  let v3= ()=>{     //here arrow fuction.arrow function are also a anoymous and call back function
+    console.log("this is a  another function.using arrow")
+  }    
+  v3()
