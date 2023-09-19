@@ -19,7 +19,7 @@ console.log("after using spread operator obj1:",obj1)
  var array1=[...array]
  console.log("array",array)
  console.log("after using spread operator array1:",array1)
- var bb=Math.max(...array);
+ var bb=Math.max(array);
  console.log("maximum=",bb)
 
 

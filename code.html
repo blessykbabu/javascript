@@ -18,8 +18,8 @@
             var time=document.getElementById("time");
             var dt=new Date();
             var hours=dt.getHours()
-            var ampn=hours>12?"pm":"am";
-            time.innerHTML=putzero(hours%12)+":"+putzero(dt.getMinutes())+":"+putzero(dt.getSeconds())+ampn;
+            var ampm=hours>12?"pm":"am";
+            time.innerHTML=putzero(hours%12)+":"+putzero(dt.getMinutes())+":"+putzero(dt.getSeconds())+ampm;
             setTimeout(function(){
                 show();
             },1000)
