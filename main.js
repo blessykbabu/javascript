@@ -61,10 +61,10 @@ console.log("calling reult1", result1());   //console result :here print error m
 //        //timer
 // setInterval(function(){
 //   console.log("Body of the function");
-// },1000)
+// },1000)                                             //the console is print 10000 times
 
 // setTimeout(function(){
-//   console.log("set time out");
+//   console.log("set time out");                   // in this ,the console print after that time
 // },10000)
 
                 // SPREAD OPERATOR
@@ -77,7 +77,7 @@ var ar=[22,33,44,55]
 var ar1=[...ar]
 console.log(ar)
 console.log(ar1)
-console.log("maximum",Math.max(...ar));
+console.log("maximum",Math.max(...ar));    //here use math to find maximum of the array
 
 // destructuring
 var obj11= {name:"balu",age:22,place:"kochi"}
