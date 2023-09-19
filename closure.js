@@ -10,7 +10,7 @@
 // console.log("result:", result);                               //2 functions
 // let result1 = result();
 // console.log("calling result:", result1);
-// let result2 = function innerfunction() {         // why :;;let result2=innerfunction().and declare a inside innerfunction
+// let result2 = function innerfunction() {         // why :;;let result2=innerfunction().and declare 'a' inside innerfunction
 //   return s;
 // };
 // console.log("result2:", result2);

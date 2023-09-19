@@ -58,3 +58,38 @@ let result1 = function innerfunction() {
 console.log("result1", result1);
 console.log("calling reult1", result1());   //console result :here print error message .in this code value of 'a' print becouse 'a' declared in the staring of the code
 
+//        //timer
+// setInterval(function(){
+//   console.log("Body of the function");
+// },1000)
+
+// setTimeout(function(){
+//   console.log("set time out");
+// },10000)
+
+                // SPREAD OPERATOR
+var ob={a:1,b:2,c:3};
+var ob1={...ob};
+console.log(ob)
+console.log(ob1)
+
+var ar=[22,33,44,55]
+var ar1=[...ar]
+console.log(ar)
+console.log(ar1)
+console.log("maximum",Math.max(...ar));
+
+// destructuring
+var obj11= {name:"balu",age:22,place:"kochi"}
+var{name,age,place}=obj11; //ther is no need to give same order
+console.log(name,age,place)
+var array=[1,2,3,4]
+// var[a1,b1,c1,d1]=array
+// console.log(a1,b1,c1,d1)
+
+function my([a1,b1,c1,d1]){
+   console.log("inside the function",a1,b1,c1,d1)
+}
+my(array)
+
+
