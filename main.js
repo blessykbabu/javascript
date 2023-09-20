@@ -102,49 +102,68 @@ function myfunction({ product, price, quantity }) {
 }
 myfunction(ob)
 
-// array inside array: destructuring(object inside object,object inside array,array inside object)
+// ----array inside array: destructuring-----(object inside object,object inside array,array inside object)
 
 var ar3=[1,2,3,[99,77,66]]
 var[p,q,r,[m,n,j]]=ar3
 console.log("array inside array",p,q,r,m,n,j)
-  // array functions
+
+//---------object inside object:destructuring-------
+
+var obj21={product:"rice",price:44,quantity:1000,time:{place:"konni",district:"pathanamthitta",state:"kerala"}}
+var{product,price,quantity,time:{place,district,state}}=obj21
+console.log("object inside object:",product,price,quantity,place,district,state)
+
+//-----array inside object:destructuring ------
+
+var obj44={jj:33,kk:88,ll:99,mm:[22,44,66,77]}
+var {jj,kk,ll,mm:[ii,oo,uu,yy]}=obj44
+console.log("array inside the object:",jj,kk,ll,ii,oo,uu,yy)
+
+//---------object inside array:destructuring------
+
+var ar6=[10,20,30,{colour1:"green",colour2:"red",colour3:"orange"}]
+var [va,ba,na,{colour1,colour2,colour3}]=ar6
+console.log("object inside array:",va,ba,na,colour1,colour2,colour3)
+
+  // --------array functions--------------
 var ar4=[{name:"amal",mark:49,place:"malappuram"},{name:"anil",mark:48,place:"ernakulam"},{name:"avin",mark:50,place:"alappuzha"},{name:"akhil",mark:39,place:"kollam"}]
 // console.log("array function",ar4)
-// for each 
+// -----for each ---------
 ar4.forEach((items,index)=>{ // items and index is a parameter
   console.log(items)  // here full object items is consoled     
   console.log(items.name)//only name values are consoled
 })
 
-  // find
+  // ---find-----
 
   const x=ar4.find((items)=>{
     return items.name==="anil"  // === used to check the data type  .find the name anil 
   })
   console.log("x",x)
 
-     //filter
+     //---filter----
 
   const xx=ar4.filter((items,index)=>{
     return items.mark<49    // filer the items less than the mark 49
   })
   console.log("xx",xx)
 
-  //map
+  //---map----
 
   const y=ar4.map((items)=>{
     return items.name
   })
   console.log("y",y)
 
-  //reduce
+  //----reduce---
 
   const v=ar4.reduce((total,items)=>{    //intial stage total=0.when function call total ie,0+45=45.then this 45 stored in total.next time 45 +next object mark(50 here). when skip to give 0 the it take the first array value
     return total+items.mark
   },0)
   console.log("value reduce function",v)
 
-       // this keyword
+       //--- this keyword----
 
   var obj111={a:1,b:2,c:function(){
     console.log("helo")
@@ -152,7 +171,7 @@ ar4.forEach((items,index)=>{ // items and index is a parameter
 obj111.c()
 
 var obj222={a:1,b:2,c:function(){
-  console.log("this",this)
+  console.log("this",this)//this means it console the actual object here obj222
 }}
 obj222.c()
 var obj333={a:1,b:2,c:function(){
