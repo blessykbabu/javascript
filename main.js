@@ -102,4 +102,64 @@ function myfunction({ product, price, quantity }) {
 }
 myfunction(ob)
 
+// array inside array: destructuring(object inside object,object inside array,array inside object)
 
+var ar3=[1,2,3,[99,77,66]]
+var[p,q,r,[m,n,j]]=ar3
+console.log("array inside array",p,q,r,m,n,j)
+  // array functions
+var ar4=[{name:"amal",mark:49,place:"malappuram"},{name:"anil",mark:48,place:"ernakulam"},{name:"avin",mark:50,place:"alappuzha"},{name:"akhil",mark:39,place:"kollam"}]
+// console.log("array function",ar4)
+// for each 
+ar4.forEach((items,index)=>{ // items and index is a parameter
+  console.log(items)  // here full object items is consoled     
+  console.log(items.name)//only name values are consoled
+})
+
+  // find
+
+  const x=ar4.find((items)=>{
+    return items.name==="anil"  // === used to check the data type  .find the name anil 
+  })
+  console.log("x",x)
+
+     //filter
+
+  const xx=ar4.filter((items,index)=>{
+    return items.mark<49    // filer the items less than the mark 49
+  })
+  console.log("xx",xx)
+
+  //map
+
+  const y=ar4.map((items)=>{
+    return items.name
+  })
+  console.log("y",y)
+
+  //reduce
+
+  const v=ar4.reduce((total,items)=>{    //intial stage total=0.when function call total ie,0+45=45.then this 45 stored in total.next time 45 +next object mark(50 here). when skip to give 0 the it take the first array value
+    return total+items.mark
+  },0)
+  console.log("value reduce function",v)
+
+       // this keyword
+
+  var obj111={a:1,b:2,c:function(){
+    console.log("helo")
+  }}     
+obj111.c()
+
+var obj222={a:1,b:2,c:function(){
+  console.log("this",this)
+}}
+obj222.c()
+var obj333={a:1,b:2,c:function(){
+  console.log("variable stored",this)
+  
+}}
+var tt=obj333.c
+tt()
+var obj444={a:1,b:2,c:()=>{console.log(this)}}
+obj444.c()
