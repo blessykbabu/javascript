@@ -78,9 +78,10 @@ console.log(ar)
 console.log(ar1)
 console.log("maximum", Math.max(...ar));    //here use math to find maximum of the array
 
-// destructuring
+      // destructuring
+
 var obj11 = { name: "balu", age: 22, place: "kochi" }
-var { name, age, place } = obj11; //ther is no need to give same order
+var { name, age, place } = obj11; //there is no need to give same order
 console.log(name, age, place)
 var array = [1, 2, 3, 4]
 // var[a1,b1,c1,d1]=array
@@ -182,3 +183,18 @@ var tt=obj333.c
 tt()
 var obj444={a:1,b:2,c:()=>{console.log(this)}}
 obj444.c()
+
+//call
+
+let obj55={place:"konni",time:12,day:"Thursday"}
+let ob22=function (){
+  console.log("obj55:",this.place,this.time,this.day)
+}
+ob22.call(obj55)
+
+let ob33=function(){
+  console.log("ob33:",this.place,this.time,this.day,age,mark)
+}
+// ob33.call(obj55)//here obj55 object is consoled.the age and things are undefined becoz there is no value
+
+ob33.call(obj55,12,100)
