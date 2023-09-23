@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        stud1={name:"reena",mark:30}
+        stud2={name:"veena",mark:32}
+        stud3={name:"balu",mark:35}
+         data={
+            myfunction:function(){   //here the the function is create inside the object.function name is a keyvalue  of the object
+                console.log(this)            //anonymous function
+            }
+        }
+       x=data.myfunction.bind(stud3);    //bind call when the context set
+       x()
+
+    // x=data.myfunction;   // declare function
+    //  x.call(stud1)  // then call reference
+
+
+
+    stud1={name:"reena",mark:30}
+        stud2={name:"veena",mark:32}
+        stud3={name:"balu",mark:35}
+         
+            function myfunction(){
+                console.log(this)      //normal function
+            }
+            
+    //    x=myfunction.bind(stud3);    //bind call when the context set
+    //    x()
+
+    x=myfunction;   // declare function
+     x.call(stud1)  // then call
+
+    </script>
+</body>
+</html>
