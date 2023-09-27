@@ -15,7 +15,7 @@ class student{
     displayage(){
       return  new Date().getFullYear()-this.DOB;
     }
-    static printmindob=function(...a){          //using static keywod  //destructuring the objects here."a" is varible name
+    static printmindob=function(...a){          //using static keyword  //destructuring the objects here."a" is varible name
         let arr=a.map((e)=>{
             return e.DOB;
         })
@@ -24,11 +24,13 @@ class student{
 }
 let obj=new student("REENA P",2000)
 obj.dispayName()    // before using constructor it is undefined value
+
 obj.displayDOB()
 obj.dispayName()
 console.log("age:",obj.displayage())
 let obj1=new student("MEENA S",2001);
-// student.printmindob=function(...args){
+
+// student.printmindob=function(...args){  // same as abouve.without using static keyword
 // let arr=args.map((e)=>{
 //     return e.DOB;
 // })
