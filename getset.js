@@ -62,8 +62,8 @@ myOrangeButton.onClick(function(){
 
 
 class OrangeButtn1 extends Button{
-    constructor(){
-        super();
+    constructor(name){
+        super(name);
         this.paragraph =document.createElement('p')
         this.paragraph .innerHTML="helo welcome everyone"
         document.body.appendChild(this.paragraph )
@@ -76,8 +76,7 @@ class OrangeButtn1 extends Button{
     } 
 }
 
-let myOrangeButton2=new OrangeButton("orange button2");
+let myOrangeButton2=new OrangeButtn1("orange button2");
 myOrangeButton2.onClick(function(){
     console.log("orange button2 clicked")
 })
-let Myparagraph=new OrangeButtn1
