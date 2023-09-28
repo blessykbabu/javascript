@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+function Button(name){
+    this.button=document.createElement('button')
+    this.button.innerHTML=name;
+    document.body.appendChild(this.button)
+}
+    Button.prototype.onClick=function(fun){
+            this.button.onclick=fun
+        }
+
+let Mybutton=new Button("click me")
+Mybutton.onClick(function(){
+    console.log("clicked")
+})
+  
+function Button2(name){
+    Button.call(this,name)
+}
+Button2.prototype=Object.create(Button.prototype)
+let ThisButton=new Button2("click")
+
+Button2.prototype.onClick=function(fun){
+Button.prototype.onClick.call(this,()=>{
+    this.button.style.background="yellow"
+    fun();
+})
+
+}
+ThisButton.onClick(function(){
+    console.log("you clicked the button")
+})
+
+    </script>
+</body>
+</html>
