@@ -24,7 +24,7 @@ Mybutton.onClick(function(){
   let Mybutton2=new Button1("click")
 
 
-Button1.prototype.onClick=function(funtn){       // here we update the child function 
+Button1.prototype.onClick=function(funtn){       // here we update the child's function 
     Button.prototype.onClick.call(this,()=>{
         this.button.style.background='red';
         funtn();

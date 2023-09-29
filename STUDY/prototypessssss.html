@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prototype</title>
+</head>
+<body>
+    <!-- <script>
+        function Display(name){
+            this.button=document.createElement('button')
+            this.button.innerHTML=name;
+            document.body.appendChild(this.button)
+        }
+        Display.prototype.onClick=function(f){
+              this.button.onclick=f  
+              
+            }
+      
+        
+        
+
+     let Button=new Display("submit")   
+  Button.onClick(function(){
+    console.log("submitted")
+  })
+        
+
+
+  // inheritance
+
+  function Print(name){
+   Display.call(this,name)
+  }
+
+  Print.prototype=Object.create(Display.prototype);
+
+  let Button2=new Print("RESET")
+Print.prototype.onClick=function(f){
+    Display.prototype.onClick.call(this,()=>{
+        this.button.style.background="green"
+        f();
+    })
+}
+
+  Button2.onClick(function(){
+    console.log("Now You click reset")
+  }) -->
+
+    <!-- </script> -->
+
+
+    <script>
+     function Submit(name){
+        this.button=document.createElement('button')
+        this.button.innerHTML=name;
+        document.body.appendChild(this.button)
+     }
+      Submit.prototype.onClick=function(funtn){
+        this.button.onclick=funtn;
+      }
+     let Button1=new Submit("submit")
+     Button1.onClick(function(){
+       console.log("Now it Submitted")
+     })
+
+    Reset.prototype=Object.create(Submit.prototype)
+
+     function Reset(name){
+        Submit.call(this,name)
+     }
+    let Button2=new Reset("Reset")
+
+    Reset.prototype.onClick=function(funtn){
+        Submit.prototype.onClick.call(this,()=>{
+            this.button.style.background="pink"
+            funtn();
+        })
+    }
+    Button2.onClick(function(){
+        console.log("Now it reset")
+    })
+    </script>
+</body>
+</html>
