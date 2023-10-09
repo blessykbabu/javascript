@@ -8,7 +8,7 @@ xhr.onreadystatechange=function(){
         console.log("success.Respons recieved")
         console.log("Response : ",xhr.response)
       //document.write(xhr.response);
-      var result=JSON.parse(xhr.response)
+      var result=JSON.parse(xhr.response)  //change the response into a object format
       //document.write(result);
       console.log("result : ",result)
       console.log("TYEPE: ",typeof result);
@@ -18,7 +18,7 @@ xhr.onreadystatechange=function(){
         content=content+`<tr><td>${result[i].id}</td><td>${result[i].name}</td><td>${result[i].phone}</td><td>${result[i].username}</td></tr>`;
         console.log("content : ",content)
       }
-      document.getElementById('datas').innerHTML=content
+      document.getElementById('datas').innerHTML=content   // here fetch the details in innerhtml.
     }else{
         console.log("failed")
     }
