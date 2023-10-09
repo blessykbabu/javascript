@@ -23,11 +23,15 @@ let str="Hello";
 
 
 
-str1="at is beautiful "
+// let str1="cat is beautiful good hl fisheg"
 // const exp=/cat/i;
 // const exp=/[a-z 0-9]at/
 // const exp=/^rat/i;
-// const exp=/good$/i;   // /good$/im/---m check multiple lines 
+const exp=/good$/i;   // /good$/im/---m check multiple lines using `` for multiple lines.then m-- is used to check the each lines
+
+                     let str1=`helo welcome every one.
+                     this is a new page.
+                     hope you all doing well`
 // const exp=/meats?$/i;
 // const exp=/fish(es)?$/i;
 // const exp=/fishes*$/i;
