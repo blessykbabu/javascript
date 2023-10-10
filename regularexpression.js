@@ -14,7 +14,7 @@ let str="Hello";
 
 //  \--escape character
 
-// const regexp=/\d/i           //if any digits it will betrue    eg:"hello2"
+// const regexp=/\d/i           //if any digits it will be true    eg:"hello2"
 // const regexp=/\D/i           //if any non digits it will be true   eg:"123" ----false    eg:"3343k" ----true
 // const regexp=/./i            //there is no change it always true .if it present or not.bcoz "." have special meaning so it use with "\"
 // const regexp=/\./i              //if there is any "." in string it will be ture
@@ -29,14 +29,16 @@ let str="Hello";
 // const exp=/^rat/i;
 // const exp=/good$/i;   // /good$/im/---m check multiple lines using `` for multiple lines.then m-- is used to check the each lines
 
-                     let str1=`helo welcome every one good.
-                     this is a new page good.
-                     hope you all doing well good.`
-                     const exp=/good$/i; 
+                     let str1=`helo welcome every one good
+                     this is a new page good
+                     hope you all doing well `
+                     const exp=/good$/im;    //not give m javascript take it these all as a single line.
 // const exp=/meats?$/i;
 // const exp=/fish(es)?$/i;
 // const exp=/fishes*$/i;
 // const exp=/fishes+$/i;
 // const exp=/fishe.$/i;
-const result=exp.test(str1)
-console.log("result :",result)
+// const result=exp.test(str1)
+// console.log("result :",result)
+
+  
