@@ -3,7 +3,7 @@ function onChange(arg){
     let result=validate(arg.value);  //get the value of the key  .then here call the validate function
     let label=document.getElementById("label");
     label.innerHTML=result;  
-    return;  // this return is for outside validate function
+    return;  // this return is for outside from validate function
   
 }
 function validate(value){

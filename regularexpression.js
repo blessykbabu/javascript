@@ -27,11 +27,12 @@ let str="Hello";
 // const exp=/cat/i;
 // const exp=/[a-z 0-9]at/
 // const exp=/^rat/i;
-const exp=/good$/i;   // /good$/im/---m check multiple lines using `` for multiple lines.then m-- is used to check the each lines
+// const exp=/good$/i;   // /good$/im/---m check multiple lines using `` for multiple lines.then m-- is used to check the each lines
 
-                     let str1=`helo welcome every one.
-                     this is a new page.
-                     hope you all doing well`
+                     let str1=`helo welcome every one good.
+                     this is a new page good.
+                     hope you all doing well good.`
+                     const exp=/good$/i; 
 // const exp=/meats?$/i;
 // const exp=/fish(es)?$/i;
 // const exp=/fishes*$/i;
