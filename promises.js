@@ -98,26 +98,26 @@
      //-------promise all and promise race ---------------
 
 
- let gamePlay1=new Promise((resolve,reject)=>{
-  resolve("gamePlay1 resolved.......")
- }) ; 
+//  let gamePlay1=new Promise((resolve,reject)=>{
+//   resolve("gamePlay1 resolved.......")
+//  }) ; 
  
- let gamePlay2=new Promise((resolve,reject)=>{
-  resolve("gamePlay2 resolved.......")
- }) ;  
+//  let gamePlay2=new Promise((resolve,reject)=>{
+//   resolve("gamePlay2 resolved.......")
+//  }) ;  
 
- let gamePlay3=new Promise((resolve,reject)=>{
-  resolve("gamePlay3 resolved.......")
- }) ; 
+//  let gamePlay3=new Promise((resolve,reject)=>{
+//   resolve("gamePlay3 resolved.......")
+//  }) ; 
  
- Promise.all([gamePlay1,gamePlay2,gamePlay3])
-   .then((message)=>{
-    console.log("message : ",message)
-   })
+//  Promise.all([gamePlay1,gamePlay2,gamePlay3])
+//    .then((message)=>{
+//     console.log("message : ",message)
+//    })
 
-   .catch((error)=>{
-    console.log("Error : ",error)
-   });
+//    .catch((error)=>{
+//     console.log("Error : ",error)
+//    });
 
  //promise race
 
@@ -148,6 +148,76 @@
 
    
 
+                              // promice using maop function
+
+  
+
+// let arr=[1,2,1,3,1,4];
+// let result=Promise.all(arr.map((e)=>{
+//   return new Promise((resolve,reject)=>{
+//     if(e==1){
+//       resolve("resolve")
+//     }                                         //it just an example.proper eg:payement
+//     else{
+//       resolve("resolve")
+//     }
+//   })
+// }));
+
+// result
+//      .then((message)=>{
+//       console.log("message:",message);
+//      })
+//      .catch((error)=>{
+//       console.log("error:",errror);
+//      })
 
 
+            //  async await
 
+   const preMovie=async () =>{
+                                          //  try  , catch
+
+        let friendBringTicket=()=>{
+          return new Promise((resolve,reject) =>{
+            setTimeout(() =>{
+              resolve("Here is your ticket")
+            },6000);
+          })
+        }
+
+
+        let getPopCorn=()=>{
+          return new Promise((resolve,reject) =>{
+            setTimeout(() =>{
+              resolve("Here is your popcorn")
+            },4000);
+          })
+        }
+
+
+        let getButterOnpopcorn=()=>{
+          return new Promise((resolve,reject) =>{
+            setTimeout(() =>{
+              resolve("Added butter on popcorn")
+            },2000);
+          })
+        }
+
+           let fetchData=await fetch('https://fakestoreapi.com/products')         //this is a fake api example
+           let data=await fetchData.json();
+           console.log("data :",data);
+           console.log("title :",data[1].title);
+           console.log("price :",data[1].price);
+
+
+        let ticket=await friendBringTicket();         //here we give await for this function so it wait for execution.the parent function must give async
+        console.log("Ticket: ",ticket)
+        let popcorn=await getPopCorn();
+        console.log("popcorn:",popcorn)
+        let butter=await getButterOnpopcorn();
+        console.log("butter:",butter)
+
+   }    
+   
+   preMovie();
